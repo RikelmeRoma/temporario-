@@ -1,7 +1,8 @@
 from fastapi import FastAPI
-from app.routes.rss_router import router as rss_router
+from app.controllers.rss_controller import router as rss_router
 
 app = FastAPI()
+
 app.include_router(rss_router)
 
 @app.get("/")
